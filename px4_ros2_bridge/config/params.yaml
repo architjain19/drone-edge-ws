@@ -1,0 +1,8 @@
+/**:
+   ros__parameters:
+      mqtt_broker_ip_address: '192.168.1.18'
+      mqtt_broker_port_address: 1883
+      system_ip_address: '192.168.1.18'
+      drone_id: '70001'
+      camera_topic_name: 'camera/id_70001/image_raw'
+      # default_mission_file: '/home/kalyani-unitree/dev/droneverse_ws/src/bfl_mundhwa.plan'

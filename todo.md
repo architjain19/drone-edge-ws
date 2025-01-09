@@ -1,0 +1,10 @@
+- button mavsdk actions (rth, land, etc.), stop and start camera stream option on web app button
+- switch drop down to three buttons for switching in drone-dashboard page of web app
+- add map view to web app with live tracking
+- switch between camera and map view
+- option to change image size, window, quality, etc from params file into opencv capture
+- handle return statement true false condition of ALL actions services
+- handle return response of trigger service from web to edge to return to edge waiting for completion of service
+- add feature to upload mission file from web dashboard and send it to edge device for missions (upload mission feature)
+- change default mission file path to ros pkg share config folder
+- monnitor mission progress status
