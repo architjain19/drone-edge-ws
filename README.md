@@ -39,6 +39,38 @@ RUN COMMAND >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ---------------------------------------------------- -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- INSTALLATION -->
+
+pip install setuptools==58.2.0
+pip3 install insightface
+pip install onnxruntime #for CPU-only
+pip install --upgrade typing_extensions
+pip install --upgrade insightface albumentations
+rm -rf ~/.cache/pip
+pip3 show numpy
+pip install numpy==1.23.5
+pip uninstall insightface -y
+pip install insightface
+pip show numpy insightface
+export NO_ALBUMENTATIONS_UPDATE=1
+
+follow for gpi installation: https://github.com/NVIDIA/jetson-gpio
+
+<!-- INSTALLATION -->
+
+
 ----------------------------------------------------
 
 https://medium.com/swlh/raspberry-pi-ros-2-camera-eef8f8b94304

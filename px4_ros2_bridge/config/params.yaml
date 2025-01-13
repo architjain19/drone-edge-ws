@@ -1,8 +1,10 @@
 /**:
    ros__parameters:
-      mqtt_broker_ip_address: '192.168.1.18'
+      mqtt_broker_ip_address: '192.168.0.105'
       mqtt_broker_port_address: 1883
-      system_ip_address: '192.168.1.18'
+      system_ip_address: '192.168.0.105'
       drone_id: '70001'
       camera_topic_name: 'camera/id_70001/image_raw'
-      # default_mission_file: '/home/kalyani-unitree/dev/droneverse_ws/src/bfl_mundhwa.plan'
+      recognition_threshold: 0.7                            # ranges from 0.0 -> 1.0
+      led_gpio_pin_1: 11
+      led_gpio_pin_2: 13

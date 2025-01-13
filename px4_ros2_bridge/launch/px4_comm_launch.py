@@ -53,4 +53,18 @@ def generate_launch_description():
             name='web_video_server',
             output='screen',
         ),
+        Node(
+            package='insight_face',
+            executable='face_recognition_node',
+            name='face_recognition_node',
+            parameters=[ros_params_file],
+            output='screen'
+        ),
+        Node(
+            package='insight_face',
+            executable='trigger_led_node',
+            name='trigger_led_node',
+            parameters=[ros_params_file],
+            output='screen'
+        ),
     ])
