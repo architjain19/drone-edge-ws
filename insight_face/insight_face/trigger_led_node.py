@@ -12,7 +12,7 @@ class TriggerLedNode(Node):
     def __init__(self):
         super().__init__('trigger_led_node')
 
-        self.declare_parameter('led_gpio_pin_1', 11)
+        self.declare_parameter('led_gpio_pin_1', 12)
         self.declare_parameter('led_gpio_pin_2', 13)
         self.led_gpio_pin_1 = self.get_parameter('led_gpio_pin_1').get_parameter_value().integer_value
         self.led_gpio_pin_2 = self.get_parameter('led_gpio_pin_2').get_parameter_value().integer_value
