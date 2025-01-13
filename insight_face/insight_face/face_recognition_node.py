@@ -73,7 +73,7 @@ class FaceRecognitionNode(Node):
         """Recognize the face in the input image and compare it with stored embeddings."""
         faces = self.app.get(input_img)
         if len(faces) != 1:
-            return "No face or multiple faces detected"
+            return ("No face or multiple faces detected", "Unknown", 0.0)
         
         detected_embedding = faces[0].normed_embedding
         scores = np.dot(detected_embedding, self.embeddings.T)  # Compare to known embeddings
@@ -89,20 +89,22 @@ class FaceRecognitionNode(Node):
             self.recognition_publisher.publish(rec_pub_data)
             return (f"Face recognized as {recognized_name} with a confidence score of {max_score:.2f}", recognized_name, max_score)
         else:
-            return ("Face not recognized", None, None)
+            return ("Face not recognized", "Unknown", 0.0)
 
     def image_callback(self, msg):
         """Callback to process incoming image and recognize the face."""
         cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
         result_recognize_face = self.recognize_face(cv_image)
+        # self.get_logger().info(str(result_recognize_face))
+        # self.get_logger().info(str(type(result_recognize_face[2])))
         result_str = result_recognize_face[0]
         recognized_name = result_recognize_face[1]
         conf_level = result_recognize_face[2]
                
-        if recognized_name is not None:
-            display_name = f"{recognized_name}, {round(conf_level*100, 2)}%"
-        else:
+        if recognized_name == "Unknown":
             display_name = "Unknown"
+        else:
+            display_name = f"{recognized_name}, {round(conf_level*100, 2)}%"
 
         # Draw bounding box and label if a face is recognized
         faces = self.app.get(cv_image)
