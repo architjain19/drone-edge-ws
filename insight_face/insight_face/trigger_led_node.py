@@ -32,11 +32,11 @@ class TriggerLedNode(Node):
         # Subscriber to the face recognition topic
         self.create_subscription(String, 'recognition_info', self.listener_callback, 10)
 
-    # def setup_gpio_config(self):
-    #     self.led_pins = [self.led_gpio_pin_1, self.led_gpio_pin_2]
-    #     GPIO.setmode(GPIO.BOARD)  # Use BOARD numbering
-    #     GPIO.setup(self.led_pins, GPIO.OUT, initial=GPIO.LOW)
-    #     self.get_logger().info(f'Configuring led pin number {str(self.led_gpio_pin_1)} and {str(self.led_gpio_pin_2)} for operation.')
+    def setup_gpio_config(self):
+        self.led_pins = [self.led_gpio_pin_1, self.led_gpio_pin_2]
+        GPIO.setmode(GPIO.BOARD)  # Use BOARD numbering
+        GPIO.setup(self.led_pins, GPIO.OUT, initial=GPIO.LOW)
+        self.get_logger().info(f'Configuring led pin number {str(self.led_gpio_pin_1)} and {str(self.led_gpio_pin_2)} for operation.')
 
     def load_reference_faces(self, folder):
         """Load and generate averaged embeddings from images in the folder."""
