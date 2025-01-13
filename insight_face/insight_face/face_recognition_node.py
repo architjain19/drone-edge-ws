@@ -94,8 +94,11 @@ class FaceRecognitionNode(Node):
     def image_callback(self, msg):
         """Callback to process incoming image and recognize the face."""
         cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
-        result_str, recognized_name, conf_level = self.recognize_face(cv_image)
-        
+        result_recognize_face = self.recognize_face(cv_image)
+        result_str = result_recognize_face[0]
+        recognized_name = result_recognize_face[1]
+        conf_level = result_recognize_face[2]
+               
         if recognized_name is not None:
             display_name = f"{recognized_name}, {round(conf_level*100, 2)}%"
         else:
@@ -116,8 +119,8 @@ class FaceRecognitionNode(Node):
                 log_file.write(entry + "\n")
 
         # Display the image with result_str
-        # cv2.imshow("Face Recognition", cv_image)
-        # cv2.waitKey(1)
+        cv2.imshow("Face Recognition", cv_image)
+        cv2.waitKey(1)
 
 def main(args=None):
     rclpy.init(args=args)
