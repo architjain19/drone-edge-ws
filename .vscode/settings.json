@@ -1,0 +1,13 @@
+{
+  "ros.distro": "foxy",
+  "python.autoComplete.extraPaths": [
+    "/home/kalyani-unitree/dev/droneverse_ws/install/px4_ros2_msgs/lib/python3.8/site-packages",
+    "/home/kalyani-unitree/dev/droneverse_ws/install/px4_ros2_bridge/lib/python3.8/site-packages",
+    "/opt/ros/foxy/lib/python3.8/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/kalyani-unitree/dev/droneverse_ws/install/px4_ros2_msgs/lib/python3.8/site-packages",
+    "/home/kalyani-unitree/dev/droneverse_ws/install/px4_ros2_bridge/lib/python3.8/site-packages",
+    "/opt/ros/foxy/lib/python3.8/site-packages"
+  ]
+}

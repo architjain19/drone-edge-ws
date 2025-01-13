@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/kalyani-unitree/dev/droneverse_ws/install/web_video_server/include/**",
+        "/home/kalyani-unitree/dev/droneverse_ws/install/v4l2_camera/include/**",
+        "/home/kalyani-unitree/dev/droneverse_ws/install/px4_ros2_msgs/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/kalyani-unitree/dev/droneverse_ws/src/px4_ros2_msgs/include/**",
+        "/home/kalyani-unitree/dev/droneverse_ws/src/ros2_v4l2_camera/include/**",
+        "/home/kalyani-unitree/dev/droneverse_ws/src/web_video_server/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
