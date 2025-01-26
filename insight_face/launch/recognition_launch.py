@@ -22,8 +22,8 @@ def generate_launch_description():
         ),
         Node(
             package='insight_face',
-            executable='trigger_led_node',
-            name='trigger_led_node',
+            executable='trigger_arduino_node',
+            name='trigger_arduino_node',
             parameters=[ros_params_file],
             output='screen'
         ),
