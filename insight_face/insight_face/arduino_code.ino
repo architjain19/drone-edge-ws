@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-const int ledPin1 = 9; // Connect LED 1 to pin 9
-const int ledPin2 = 10; // Connect LED 2 to pin 10
+const int ledPin1 = 3; // Connect LED 1 to pin 9
+const int ledPin2 = 5; // Connect LED 2 to pin 10
 const unsigned long blinkInterval = 500; // 500ms for LED blinking
 
 bool ledState = LOW;
