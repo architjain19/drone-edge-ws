@@ -104,7 +104,8 @@ class PX4TelemetryActionsNode(Node):
                 "udp://:14540",
                 "udp://:14550",
                 "udp://127.0.0.1:14540",
-                "udp://127.0.0.1:14550"
+                "udp://127.0.0.1:14550",
+                "serial:///dev/ttyTHS0:921600"
             ]
             
             for port in connection_ports:
