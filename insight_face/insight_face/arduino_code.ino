@@ -42,7 +42,7 @@ void loop() {
       previousMillis = currentMillis;
       ledState = !ledState;
       digitalWrite(ledPin1, ledState);
-      digitalWrite(ledPin2, ledState);
+      digitalWrite(ledPin2, HIGH);
     }
   }
 }

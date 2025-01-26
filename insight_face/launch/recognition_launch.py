@@ -27,4 +27,23 @@ def generate_launch_description():
             parameters=[ros_params_file],
             output='screen'
         ),
+        Node(
+            package='px4_ros2_bridge',
+            executable='camera_streaming',
+            name='camera_streaming',
+            output='screen',
+        ),
+        Node(
+            package='web_video_server',
+            executable='web_video_server',
+            name='web_video_server',
+            output='screen',
+        ),
+        Node(
+            package='px4_ros2_bridge',
+            executable='trigger_service',
+            name='trigger_service',
+            parameters=[ros_params_file],
+            output='screen'
+        ),
     ])
