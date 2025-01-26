@@ -28,6 +28,7 @@ setup(
         'console_scripts': [
             'face_recognition_node = insight_face.face_recognition_node:main',
             'trigger_led_node = insight_face.trigger_led_node:main',
+            'trigger_arduino_node = insight_face.trigger_arduino_node:main',
         ],
     },
 )

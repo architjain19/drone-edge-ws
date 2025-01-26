@@ -8,3 +8,5 @@
       recognition_threshold: 0.7                            # ranges from 0.0 -> 1.0
       led_gpio_pin_1: 12
       led_gpio_pin_2: 13
+      arduino_port: '/dev/ttyUSB0'
+      arduino_baud_rate: 9600
