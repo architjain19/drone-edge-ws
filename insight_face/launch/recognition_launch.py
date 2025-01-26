@@ -46,4 +46,19 @@ def generate_launch_description():
             parameters=[ros_params_file],
             output='screen'
         ),
+
+        Node(
+            package='px4_ros2_bridge',
+            executable='device_network_status',
+            name='device_network_status',
+            parameters=[ros_params_file],
+            output='screen'
+        ),
+        Node(
+            package='px4_ros2_bridge',
+            executable='ros2_to_mqtt',
+            name='ros2_to_mqtt',
+            parameters=[ros_params_file],
+            output='screen'
+        ),
     ])
