@@ -68,6 +68,10 @@ export NO_ALBUMENTATIONS_UPDATE=1
 
 follow for gpi installation: https://github.com/NVIDIA/jetson-gpio
 
+pip3 install paho-mqtt==1.5.1
+pip install pyserial
+pip3 install scipy==1.10.1
+
 <!-- INSTALLATION -->
 
 
