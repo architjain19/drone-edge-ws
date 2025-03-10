@@ -52,7 +52,7 @@ RUN COMMAND >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 <!-- INSTALLATION -->
-
+```
 pip install setuptools==58.2.0
 pip3 install insightface
 pip install onnxruntime #for CPU-only
@@ -65,12 +65,15 @@ pip uninstall insightface -y
 pip install insightface
 pip show numpy insightface
 export NO_ALBUMENTATIONS_UPDATE=1
+```
 
 follow for gpi installation: https://github.com/NVIDIA/jetson-gpio
 
+```
 pip3 install paho-mqtt==1.5.1
 pip install pyserial
 pip3 install scipy==1.10.1
+```
 
 <!-- INSTALLATION -->
 
